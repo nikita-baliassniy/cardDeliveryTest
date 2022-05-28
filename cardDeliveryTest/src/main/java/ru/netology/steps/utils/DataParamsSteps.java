@@ -13,7 +13,7 @@ public class DataParamsSteps {
 	JsonDataReader jsonDataReader = new JsonDataReader();
 
 	@Дано("данные пользователя подгружены из файла (.*)$")
-	public void openMainPage(String fileName) {
+	public void loadUserData(String fileName) {
 		PersonData personData = jsonDataReader.getPersonData(evalVariable(fileName));
 		for (Field f : personData.getClass().getDeclaredFields()) {
 			try {
