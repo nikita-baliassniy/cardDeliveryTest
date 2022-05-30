@@ -1,4 +1,4 @@
-##cardDeliveryTest запуск
+## cardDeliveryTest запуск
 
 RunnerClassGenerator отвечает за генерацию тестовых данных для тестового
 CucumberRunner за запуск тестов, CardDeliveryTest.feature - сама фича с тестами.
