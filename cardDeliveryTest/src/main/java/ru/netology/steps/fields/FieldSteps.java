@@ -4,9 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 
 import cucumber.api.DataTable;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.ru.Когда;
-import cucumber.api.java.ru.Тогда;
 import ru.netology.steps.AbstractStepsHolder;
 
 public class FieldSteps extends AbstractStepsHolder {
@@ -30,24 +29,13 @@ public class FieldSteps extends AbstractStepsHolder {
 		fieldScenarioSteps.clickField(field);
 	}
 
-	@Тогда("^поле (.+) видимо$")
+	@Then("^поле (.+) видимо$")
 	public void stepFieldIsDisplayed(String fieldName) {
 		boolean isPresent = fieldScenarioSteps.fieldIsPresent(fieldName);
 		assertTrue("Поле " + fieldName + " не существует на странице", isPresent);
 	}
 
-	@Когда("^переменная \"([^\"]*)\" принимает значение \"([^\"]*)\"$")
-	public void variableGetsValue(String variable, String value) {
-		System.out.println(value);
-		setVariable(variable, value);
-	}
-
-	@Когда("^переменная (.*) принимает значение из файла (.*)")
-	public void stepSaveCustomValueToVariable(String value, String variable) {
-		setVariable(variable, value);
-	}
-
-	@Когда("^приостановлено выполнение на (.+) (?:секунд|секунду|секунды)$")
+	@When("^приостановлено выполнение на (.+) (?:секунд|секунду|секунды)$")
 	public void stopProcessing(int seconds) {
 		try {
 			Thread.sleep(1000 * seconds);

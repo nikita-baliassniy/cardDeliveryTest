@@ -15,16 +15,6 @@ public class TextInput extends AbstractField {
 	}
 
 	@Override
-	public String getErrorMsg() {
-		return null;
-	}
-
-	@Override
-	public boolean isEditable() {
-		return false;
-	}
-
-	@Override
 	public String getLabel() {
 		return null;
 	}
@@ -37,14 +27,16 @@ public class TextInput extends AbstractField {
 	@Override
 	public void type(String value) {
 		SelenideElement element = this.element;
+		int counter = 15;
 		element.waitUntil(Condition.enabled, DriverManager.getDefaultImplicitlyWait());
 		while (!element.getValue().equals(value) && !element.getValue().replaceAll(" ", "")
-				.equals(value)) {
+				.equals(value) && counter > 0) {
 			try {
 				Thread.sleep(200);
 				element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
 				element.sendKeys(Keys.BACK_SPACE);
 				element.sendKeys(value);
+				counter++;
 			} catch (InterruptedException ex) {
 				ex.printStackTrace();
 			}

@@ -1,6 +1,5 @@
 package ru.netology.pages;
 
-import cucumber.api.Transformer;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -24,15 +23,5 @@ public class Page {
 	@Override
 	public String toString() {
 		return name;
-	}
-
-	public static class Converter extends Transformer<Page> {
-		public Converter() {
-		}
-
-		@Override
-		public Page transform(String value) {
-			return new Page(PageObjects.getClassMap().get(value), value);
-		}
 	}
 }

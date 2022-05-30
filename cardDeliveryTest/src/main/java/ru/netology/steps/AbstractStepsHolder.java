@@ -45,16 +45,8 @@ public class AbstractStepsHolder {
 				}
 			};
 
-	public static Map<Object, Object> getVariables() {
-		return variables.get();
-	}
-
 	public static void setVariable(String name, Object value) {
 		variables.get().put(name, value);
-	}
-
-	public static Object getVariable(String name) {
-		return variables.get().get(name);
 	}
 
 	public static <T> T evalVariable(String param) {
