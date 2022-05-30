@@ -1,5 +1,5 @@
 version: '{build}'
-image: Ubuntu  # образ для сборки
+image: Windows Server 2012  # образ для сборки
 
 stack: jdk 8  # версия JDK
 branches:
@@ -13,7 +13,7 @@ install:
   - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%
   - cmd: SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g
   - cmd: SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g
-  - java -jar ./cardDeliveryTest/artifacts/app-card-delivery.jar &
+  - cmd: start /b java -jar ./cardDeliveryTest/artifacts/app-card-delivery.jar
 build_script:
   - cd cardDeliveryTest
   - mvn clean compile exec:java -Denvironment=service "-Dcucumber.options=--tags @card-delivery-replanning" test
