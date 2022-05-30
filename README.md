@@ -1,6 +1,6 @@
 ## cardDeliveryTest запуск
 
-RunnerClassGenerator отвечает за генерацию тестовых данных для тестового
+RunnerClassGenerator отвечает за генерацию тестовых данных для тестов
 CucumberRunner за запуск тестов, CardDeliveryTest.feature - сама фича с тестами.
 Строка запуска: 
 mvn clean compile exec:java -Denvironment=service "-Dcucumber.options=--tags @card-delivery-replanning" test
