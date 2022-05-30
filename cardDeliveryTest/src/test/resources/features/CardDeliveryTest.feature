@@ -1,5 +1,5 @@
 #language: ru
-@card-delivery-replanning
+
 Функционал: Проверка функционала перепланирования доставки банковской карты
 
 	@card-delivery-replanning @positive
