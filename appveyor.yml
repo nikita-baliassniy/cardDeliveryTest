@@ -1,7 +1,7 @@
 version: '{build}'
 image: Ubuntu  # образ для сборки
 
-stack: jdk 11  # версия JDK
+stack: jdk 8  # версия JDK
 branches:
   only:
     - main
@@ -14,4 +14,4 @@ install:
   - cmd: SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g
   - java -jar ./cardDeliveryTest/artifacts/app-card-delivery.jar &
 build_script:
-  - mvn clean compile exec:java -Denvironment=service "-Dcucumber.options=--tags @card-delivery-replanning" --add-opens java.base/java.lang=ALL-UNNAMED test
+  - mvn clean compile exec:java -Denvironment=service "-Dcucumber.options=--tags @card-delivery-replanning" test
