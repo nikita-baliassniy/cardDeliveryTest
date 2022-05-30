@@ -8,6 +8,7 @@ branches:
 build: off
 install:
   - cmd: choco install maven -y -f
+  - cmd: choco install googlechrome
   - cmd: refreshenv
   - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%
   - cmd: SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g
