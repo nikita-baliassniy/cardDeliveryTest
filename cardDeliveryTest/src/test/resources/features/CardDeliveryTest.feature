@@ -48,13 +48,13 @@
 		И выполнено нажатие на Запланировать
 		И поле Неподходящая дата видимо
 		Примеры:
-			| file                      | date                  |
-			| GeneratedTestFile_3.json  | #{now(dd.MM.yyyy)-1d} |
-			| GeneratedTestFile_4.json  | #{now(dd.MM.yyyy)}    |
-			| GeneratedTestFile_5.json  | #{now(dd.MM.yyyy)+1d} |
-			| GeneratedTestFile_6.json  | #{now(dd.MM.yyyy)+2d} |
-			| GeneratedTestFile_7.json  | #{now(dd.MM.yyyy)-1M} |
-			| GeneratedTestFile_8.json  | #{now(dd.MM.yyyy)-1y} |
+			| file                     | date                  |
+			| GeneratedTestFile_3.json | #{now(dd.MM.yyyy)-1d} |
+			| GeneratedTestFile_4.json | #{now(dd.MM.yyyy)}    |
+			| GeneratedTestFile_5.json | #{now(dd.MM.yyyy)+1d} |
+			| GeneratedTestFile_6.json | #{now(dd.MM.yyyy)+2d} |
+			| GeneratedTestFile_7.json | #{now(dd.MM.yyyy)-1M} |
+			| GeneratedTestFile_8.json | #{now(dd.MM.yyyy)-1y} |
 			| GeneratedTestFile_9.json | 01.01.0001            |
 
 	@card-delivery-replanning @negative

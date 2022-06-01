@@ -73,7 +73,6 @@ public class FieldExtractor {
 	}
 
 	public static <T extends AbstractField> T getField(IPageObject page, String name) {
-
 		FieldDefinition field = getFieldDefinition(page, name);
 		Assert.assertNotNull(String.format("Не найдено поле: [%s] в описании полей", name), field);
 		final String locator = field.getTarget();
