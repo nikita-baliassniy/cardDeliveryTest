@@ -5,6 +5,8 @@ CucumberRunner за запуск тестов, CardDeliveryTest.feature - сам
 Строка запуска: 
 - mvn clean compile exec:java -Denvironment=service "-Dcucumber.options=--tags @card-delivery-replanning" test
 - runApp test
+
+
 *chromedriver.exe в проекте работает с последней (30.05.2022) версией хрома - 102.0.5005
 
 ## Сомнительное поведение SUT
